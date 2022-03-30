@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/cicd
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        default_batch_fetch_size: 100
+
+logging.level:
+  org.hibernate.type: trace
+
+config:
+  kubernetes:
+    url: https://192.168.56.10:6443
+    token: eyJhbGciOiJSUzI1NiIsImtpZCI6IlpfeDZMZE8yYjBUUXBadS10dFpDdW1kUU5tcTJKRUpLeUQ4VjNaWWsxb3MifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tNXZmenQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImVjZWQxZTNhLWVhYTYtNDEyYS05N2NjLTI3MWJhNGYwMTdhZiIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.PZM3SO9PViTqgEwQsfqs3suujlczcQgn2cKLMTxrHTn-G5IZslSFPMBNirHNwurEW5opV8LtoUGE3qiv6gqD0Ta0khO0sJsrpG1wt1M7AZl3opzywfh-B-TVUZ-ba4TWbwmQAuBrzPadnrXr0xoYgQvjQloxGuY4AdAb1MUJ5OyWqlf1U_XYZIStQ5nr-a5XZxMWKBl3H6jwpcQnKtWctX0eFVyu5AazFoo7dqY25mKdnbwwEevKfgIK0bqb9DwqblohyIZjaOEl5DGJoLwSlGWpfEmecCQxHn6TF1UqyKuS_2R5tJY1nHdI9oqGSDkWXMnu-3dN3DGwsy4S9PDaVA
